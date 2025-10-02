@@ -41,8 +41,22 @@
   font-weight: 500;
   transition: background-color 0.25s ease, transform 0.1s ease;
 }
+.card-view {
+  align-self: flex-end;
+  background-color: #4ae7b3;
+  max-width: 5rem;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
 
 .card-link:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+.card-view:hover {
   background-color: #4338ca;
   transform: translateY(-2px);
 }

@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './styles/index.css';
-import App from './pages/App';
-import Home from './pages/Home';
 import Contact from './pages/Contact';
 import reportWebVitals from './reportWebVitals';
 
@@ -12,11 +10,6 @@ root.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        {/* Homepage */}
-        <Route exact path="/" component={Home} />
-
-        {/* Your form/application */}
-        <Route path="/app" component={App} />
 
        {/* Contact */}
         <Route path="/contact" component={Contact} />

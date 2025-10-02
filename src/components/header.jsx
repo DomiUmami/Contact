@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles/Header.css";
+import "../styles/Header.css";
 import { useLocation } from "react-router-dom";
 
 function Header() {
@@ -11,9 +11,9 @@ function Header() {
 
   const location = useLocation();
   const routeTitles = {
-    "/": "Home",
-    "/app": "App",
+
     "/contact": "Contact",
+    
   };
 
   // Default fallback if path doesn’t match
@@ -29,9 +29,9 @@ function Header() {
         </button>
         {isOpen && (
           <ul className="dropdown-menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/app">App</a></li>
+
             <li><a href="/contact">Contact</a></li>
+
           </ul>
         )}
       </nav>

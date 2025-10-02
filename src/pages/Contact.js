@@ -2,8 +2,8 @@ import React from 'react';
 import '../styles/App.css';
 /*import { useHistory } from 'react-router-dom';*/
 
-import Header from '../header';
-import Footer from '../footer';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 import "../styles/Header.css"
 import "../styles/Layout.css"
