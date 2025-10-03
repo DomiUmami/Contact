@@ -12,7 +12,7 @@ root.render(
       <Switch>
 
        {/* Contact */}
-        <Route path="/contact" component={Contact} />
+        <Route path="/" component={Contact} />
 
       </Switch>
     </Router>
