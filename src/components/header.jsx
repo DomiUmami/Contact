@@ -11,13 +11,13 @@ function Header() {
 
   const location = useLocation();
   const routeTitles = {
-
+    "https://duminimumcontact.vercel.app" : "Contact",
     "/contact": "Contact",
     
   };
 
   // Default fallback if path doesn’t match
-  const headerName = routeTitles[location.pathname] || "Contact" /*This will change when more pages are set up*/;
+  const headerName = routeTitles[location.pathname] || "Home" /*This will change when more pages are set up*/;
 
 
   return (
