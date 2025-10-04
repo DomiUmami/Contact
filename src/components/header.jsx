@@ -12,13 +12,12 @@ function Header() {
   const location = useLocation();
   const routeTitles = {
 
-    "/": "Contact"/*This will change when more pages are set up*/,
     "/contact": "Contact",
     
   };
 
   // Default fallback if path doesn’t match
-  const headerName = routeTitles[location.pathname] || "App";
+  const headerName = routeTitles[location.pathname] || "Contact" /*This will change when more pages are set up*/;
 
 
   return (
