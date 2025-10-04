@@ -12,6 +12,7 @@ function Header() {
   const location = useLocation();
   const routeTitles = {
 
+    "/": "Contact"/*This will change when more pages are set up*/,
     "/contact": "Contact",
     
   };

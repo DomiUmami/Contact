@@ -26,6 +26,8 @@ function Contact() {
 
       <main className="main">
         <GithubProfile username="DomiUmami" />
+
+        
       </main>
 
       <aside className="rightside">
