@@ -8,7 +8,7 @@ import Footer from '../components/footer';
 import "../styles/Header.css"
 import "../styles/Layout.css"
 import "../styles/Contact.css"
-import placeholder from '../placeholder.png'
+import placeholder from '../images/placeholder.png'
 
 import ProjectCardGenerator from "../components/CardGenerator";
 import GithubProfile from '../components/GitHubCall';
