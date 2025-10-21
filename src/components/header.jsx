@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Header.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +8,8 @@ function Header() {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const history = useHistory();
 
   const location = useLocation();
   const routeTitles = {
@@ -22,7 +24,11 @@ function Header() {
 
   return (
     <header className="header">
-      <h1 className="logo">{headerName}</h1>
+            <h1 className="logo" 
+        onClick={() => history.push("/")}
+        style={{ cursor: "pointer" }}
+          >{headerName}
+      </h1>
       <nav className="nav">
         <button className="dropdown-btn" onClick={toggleDropdown}>
           Menu ▼
