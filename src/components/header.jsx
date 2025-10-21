@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Header.css";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,6 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
-  const history = useHistory();
   const location = useLocation();
   
   const routeTitles = {
