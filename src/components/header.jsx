@@ -24,8 +24,8 @@ function Header() {
 
   return (
     <header className="header">
-            <h1 className="logo" 
-        onClick={() => history.push("/")}
+      <h1 className="logo" 
+        onClick={() => history.push("https://duminimumreactics.vercel.app/")}
         style={{ cursor: "pointer" }}
           >{headerName}
       </h1>
