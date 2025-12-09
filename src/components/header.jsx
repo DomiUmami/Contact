@@ -39,7 +39,7 @@ function Header() {
           <ul className="dropdown-menu">
             <li><a href="https://duminimum.vercel.app/contact">Contact</a></li>
             <li><a href="https://duminimum.vercel.app/cred">Credentialing</a></li>
-            <li><a href="https://duminimum.vercel.app/osiris">Osiris</a></li>
+            <li><a href="https://duminimumosiris.vercel.app">Osiris</a></li>
             <li><a href="https://duminimum.vercel.app/verity">Verity</a></li>
           </ul>
         )}
