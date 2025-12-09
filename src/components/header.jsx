@@ -15,7 +15,6 @@ function Header() {
     "/": "Home",
     "/cred": "Credentialing App",
     "/contact": "Contact",
-    "/verity": "Verity",
     "/osiris" : "Osiris"
   };
 
@@ -40,7 +39,6 @@ function Header() {
             <li><a href="https://duminimumcontact.vercel.app">Contact</a></li>
             <li><a href="https://duminimum.vercel.app/cred">Credentialing</a></li>
             <li><a href="https://duminimumosiris.vercel.app">Osiris</a></li>
-            <li><a href="https://duminimum.vercel.app/verity">Verity</a></li>
           </ul>
         )}
       </nav>
