@@ -36,8 +36,8 @@ function Header() {
           Menu ▼
         </button>
         {isOpen && (
-          <ul className="dropdown-menu">
-            <li><a href="https://duminimum.vercel.app/contact">Contact</a></li>
+         <ul className="dropdown-menu">
+            <li><a href="https://duminimumcontact.vercel.app">Contact</a></li>
             <li><a href="https://duminimum.vercel.app/cred">Credentialing</a></li>
             <li><a href="https://duminimumosiris.vercel.app">Osiris</a></li>
             <li><a href="https://duminimum.vercel.app/verity">Verity</a></li>
