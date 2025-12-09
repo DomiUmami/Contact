@@ -23,7 +23,7 @@ function Header() {
   const headerName = routeTitles[location.pathname] || "Failed";
  const goHome = () => {
     // External link (different domain)
-    window.location.href = "https://duminimumreactics.vercel.app/";
+    window.location.href = "https://duminimum.vercel.app/";
   };
 
   return (
@@ -37,10 +37,10 @@ function Header() {
         </button>
         {isOpen && (
           <ul className="dropdown-menu">
-            <li><a href="https://duminimumcontact.vercel.app/contact">Contact</a></li>
-            <li><a href="https://duminimumreactics.vercel.app/cred">Credentialing</a></li>
-            <li><a href="https://duminimumosiris.vercel.app">Osiris</a></li>
-            <li><a href="https://duminimumreactics.vercel.app/verity">Verity</a></li>
+            <li><a href="https://duminimum.vercel.app/contact">Contact</a></li>
+            <li><a href="https://duminimum.vercel.app/cred">Credentialing</a></li>
+            <li><a href="https://duminimum.vercel.app/osiris">Osiris</a></li>
+            <li><a href="https://duminimum.vercel.app/verity">Verity</a></li>
           </ul>
         )}
       </nav>
