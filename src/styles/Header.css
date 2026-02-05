@@ -1,23 +1,118 @@
-.header {
+/* =========================
+   Header Container
+========================= */
+
+header.header {
   display: flex;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+
+  isolation: isolate;
+
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background: #282c34;
-  color: white;
-  transform: translateY(-15px);
-  animation: fadeInUp 0.6s forwards ease-out;
+
+  padding: 20px 32px;
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
+
+  background: linear-gradient(
+    to bottom,
+    #68e9de 0%,
+    #28cab5 50%,
+    #00685f 100%
+  );
+
+  overflow: visible;
+  transform: translateY(-15px);
+  animation: fadeInUp 0.6s ease-out forwards;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.25);
 }
+
+/* =========================
+   Gloss Overlay
+========================= */
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 45%;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure content stays above gloss */
+.header > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   Navigation
+========================= */
 
 .nav {
   position: relative;
 }
+
+.nav2 {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.logo {
+  cursor: pointer;
+}
+
+/* =========================
+   Header Links
+========================= */
+/* Base anchor styles */
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover state */
+.header a:hover {
+  color: #3c5c54;
+}
+
+.links,
+.links a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* =========================
+   Dropdown Button
+========================= */
 
 .dropdown-btn {
   background: none;
@@ -27,17 +122,25 @@
   cursor: pointer;
 }
 
+/* =========================
+   Dropdown Menu
+========================= */
+
 .dropdown-menu {
   position: absolute;
   top: 2rem;
   right: 0;
+  z-index: 9999;
+
   background: white;
   color: black;
+
   list-style: none;
   padding: 0.5rem 0;
   margin: 0;
+
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-menu li {
