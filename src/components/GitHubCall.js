@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "../styles/Contact.css"
+import "../styles/Contact.css";
 
 function GithubProfile({ username }) {
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
-
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -27,17 +26,25 @@ function GithubProfile({ username }) {
 
   return (
     <div className="profile-container">
-        <div>
-      <img className="profile-picture"
-        src={profile.avatar_url}
-        alt={profile.name || profile.login}
-        width="120"
-        style={{ borderRadius: "50%" }}
-      />
-      <p className="profile-name">{profile.name || profile.login}</p>
-      <p className="profile-login">{profile.login}</p>
-      {profile.bio && <p>{profile.bio}</p>}
-        </div>
+      <div>
+        <a
+          href="https://www.linkedin.com/in/dominikwilliams/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="profile-picture"
+            src={profile.avatar_url}
+            alt={profile.name || profile.login}
+            width="120"
+            style={{ borderRadius: "50%", cursor: "pointer" }}
+          />
+        </a>
+
+        <p className="profile-name">{profile.name || profile.login}</p>
+        <p className="profile-login">{profile.login}</p>
+        {profile.bio && <p>{profile.bio}</p>}
+      </div>
     </div>
   );
 }

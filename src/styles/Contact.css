@@ -6,8 +6,8 @@
     flex-direction: column; /* Stack items vertically */
     justify-content: flex-start;
     align-items: center;
-    background-color: #f9f9f9; /* Light background */
-    border-radius: 10px;
+    background-color: #ffffffe7; /* Light background */
+    border-radius: 2rem;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
     max-width: 400px; /* Centered and compact */
@@ -24,6 +24,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
     margin-bottom: 15px; /* Space below picture */
   }
+
   
   /* Name styling */
   .profile-name {
@@ -53,7 +54,7 @@
   }
   
   /* Hover effect (Optional) */
-  .profile-container:hover {
+  .profile-picture:hover {
     transform: translateY(-5px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
