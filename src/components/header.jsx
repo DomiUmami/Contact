@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Header.css";
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,10 +9,9 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
+  const location = useLocation();
   const routeTitles = {
-    "https://duminimumosiris.vercel.app" : "Osiris",
-    
-    
+   //Currently empty
   };
 
   // Default fallback if path doesn’t match
@@ -28,11 +28,6 @@ const goHome = () => {
         {headerName}
       </h1>
 
-        <nav className="nav2" >
-        <h2 className="links" >All</h2>
-        <h3 className="links" >MHW</h3>
-        <h3 className="links" >MHWilds</h3>
-     </nav>
 
      <nav className="nav">
         <button className="dropdown-btn" 
