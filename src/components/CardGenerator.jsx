@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
-import "../styles/Cards.css";
+import "../styles/NewApp.css"
 
 export default function ProjectCardGenerator({ username }) {
     const [repos, setRepos] = useState([]);
@@ -28,18 +28,18 @@ export default function ProjectCardGenerator({ username }) {
   if (loading) return <p>Loading repositories...</p>;
   if (!repos.length) return <p>No repositories found.</p>;
 
+  const liveSites = [
+    "duminimum",
+    "handlerlite",
+    "DUContact",
 
+  ]
 
     /* const projects = [
     {
       name: "Electron Template",
       description: "A cool project I made in React.",
       url: "https://github.com/DomiUmami/ElectronTemplate.git",
-    },
-    {
-      name: "reactics",
-      description: "A fun JavaScript experiment.",
-      url: "https://github.com/DomiUmami/reactics.git",
     },
     {
       name: "Final BloomTech Project",
@@ -58,9 +58,9 @@ export default function ProjectCardGenerator({ username }) {
 */
 
  return (
-  <div>
-    <p className="card-title">Recent Projects</p>
-    <div className="project-card-container">
+  <div  className="project-card-container">
+    <p className="maintext">Personal Projects</p>
+    <div className="project-card-row">
       {repos
       .filter((repo) => !repo.name.toLowerCase().includes("sprint"))
       .filter((repo) => !repo.name.toLowerCase().includes("domiumami"))
@@ -74,10 +74,13 @@ export default function ProjectCardGenerator({ username }) {
             name: repo.name,
             description: repo.description || "No description provided.",
             url: repo.html_url,
+            liveUrl: liveSites.includes(repo.name)
+            ? `https://${repo.name}.vercel.app`
+            : null
           }}
         />
       ))}
     </div>
-  </div>
-  );
+      </div>
+    );
 }

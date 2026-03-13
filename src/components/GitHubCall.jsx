@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/Contact.css";
+import '../styles/NewApp.css';
 
 function GithubProfile({ username }) {
   const [profile, setProfile] = useState(null);

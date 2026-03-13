@@ -1,4 +1,4 @@
-import "../styles/Cards.css";
+import "../styles/NewApp.css";
 
 
 export default function ProjectCard({ project }) {
@@ -7,21 +7,23 @@ export default function ProjectCard({ project }) {
     
       <h2 className="card-title">{project.name}</h2>
       <p className="card-description">{project.description}</p>
+      {project.liveUrl && (
+      <a
+        href={project.liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="live-link"
+      >
+        View Live
+      </a>
+  )}
       <a
         href={project.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="card-link"
+        className="repo-link"
       >
         View Repo
-      </a>
-      <a
-        href={`https://${project.name}.vercel.app`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="card-link"
-      >
-        View Live
       </a>
     </div>
   );
