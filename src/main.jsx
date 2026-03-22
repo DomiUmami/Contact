@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './styles/NewApp.css';
 import Contact from './pages/Contact';
+import { Analytics } from '@vercel/analytics/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
 
       </Switch>
     </Router>
+    <Analytics/>
   </React.StrictMode>
 );
 
